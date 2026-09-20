@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="UDAAN — Career & Scholarship Portal. Discover scholarships, career pathways, courses, skills and support opportunities.">
+  <meta name="theme-color" content="#326080">
+  <title>UDAAN — Career & Scholarship Portal</title>
+  <link rel="manifest" href="manifest.webmanifest">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" crossorigin="">
+</head>
+<body>
+  <a class="skip-link" href="#main" data-i18n="skip">Skip to main content</a>
+
+  <header class="site-header" id="top">
+    <div class="announcement">
+      <div class="container announcement-inner">
+        <span class="announcement-pill">UDAAN</span>
+        <span data-i18n="announcement">Career, scholarship & skill discovery for your next step.</span>
+        <a class="announcement-link" href="#scholarships" data-i18n="browseScholarships">Browse verified scholarships →</a>
+      </div>
+    </div>
+
+    <nav class="nav" aria-label="Main navigation">
+      <div class="container nav-inner">
+        <a class="brand" href="#top" aria-label="UDAAN home">
+          <span class="brand-mark" aria-hidden="true">↗</span>
+          <span><strong>UDAAN</strong><small>Career & Scholarship Portal</small></span>
+        </a>
+
+        <button class="nav-toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="primaryMenu">
+          <span></span><span></span><span></span>
+          <span class="sr-only" data-i18n="menu">Menu</span>
+        </button>
+
+        <div class="nav-panel" id="primaryMenu">
+          <div class="nav-links">
+            <a class="nav-link active" href="#discover" data-section-link="discover" data-i18n="navDiscover">Discover</a>
+            <a class="nav-link" href="#scholarships" data-section-link="scholarships" data-i18n="navScholarships">Scholarships</a>
+            <a class="nav-link" href="#careers" data-section-link="careers" data-i18n="navCareers">Careers</a>
+            <a class="nav-link" href="#courses" data-section-link="courses" data-i18n="navCourses">Courses</a>
+            <a class="nav-link" href="#skills" data-section-link="skills" data-i18n="navSkills">Skills</a>
+            <a class="nav-link" href="#youtube" data-section-link="youtube" data-i18n="navYoutube">YouTube Courses</a>
+            <a class="nav-link" href="#map-container" data-section-link="map-container" data-i18n="navMap">Map</a>
+            <button class="nav-link nav-button" type="button" data-action="open-saved"><span data-i18n="navSaved">Saved</span><span class="nav-dot" aria-hidden="true"></span></button>
+          </div>
+          <div class="nav-actions">
+            <div class="language-switcher" role="group" aria-label="Language">
+              <button type="button" class="lang-option active" data-lang="en">EN</button>
+              <button type="button" class="lang-option" data-lang="hi">हिं</button>
+              <button type="button" class="lang-option" data-lang="mr">मर</button>
+            </div>
+            <button id="themeToggle" class="nav-more theme-toggle" type="button" aria-pressed="false"><span class="theme-icon" aria-hidden="true">☾</span><span data-i18n="themeDark">Dark mode</span></button>
+            <a class="nav-more" href="about.html" data-i18n="navAbout">About</a>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="hero" id="discover" aria-labelledby="heroTitle">
+      <div class="hero-orbit orbit-one"></div><div class="hero-orbit orbit-two"></div>
+      <div class="hero-line line-one"></div><div class="hero-line line-two"></div>
+      <div class="container hero-grid">
+        <div class="hero-copy reveal">
+          <div class="eyebrow"><span class="eyebrow-dot"></span><span data-i18n="eyebrow">Built for your next move</span></div>
+          <h1 id="heroTitle" data-i18n="heroTitle">Your Future Has More Than One Path.</h1>
+          <p data-i18n="heroDescription">Discover scholarships, careers, courses and skills designed to help you take your next step.</p>
+          <div class="hero-actions">
+            <a class="btn btn-primary btn-lg" href="#discovery" data-i18n="exploreBtn">Explore Opportunities <span aria-hidden="true">↗</span></a>
+            <button class="btn btn-ghost btn-lg" type="button" data-open-section="careers" data-i18n="findCareerBtn">Find My Career</button>
+          </div>
+          <div class="hero-note"><span class="hero-note-icon">◎</span><span data-i18n="heroNote">Designed around real information gaps observed during community field visits.</span></div>
+          <div class="hero-metrics" aria-label="Platform highlights">
+            <div><strong data-counter="6">0</strong><span data-i18n="metricGaps">documented gaps addressed</span></div>
+            <div><strong data-counter="3">0</strong><span data-i18n="metricLanguages">languages</span></div>
+            <div><strong data-counter="6">0</strong><span data-i18n="metricModules">core modules</span></div>
+          </div>
+        </div>
+
+        <div class="journey-card reveal" aria-label="Student journey">
+          <div class="journey-top"><span class="journey-label" data-i18n="journeyLabel">Your Udaan</span><span class="journey-status">LIVE</span></div>
+          <div class="journey-path" aria-hidden="true">
+            <div class="path-track"></div>
+            <div class="path-node n1"><span>01</span><b data-i18n="journeySchool">School</b></div>
+            <div class="path-node n2"><span>02</span><b data-i18n="journeySkills">Skills</b></div>
+            <div class="path-node n3"><span>03</span><b data-i18n="journeyCourses">Courses</b></div>
+            <div class="path-node n4"><span>04</span><b data-i18n="journeyCareer">Career</b></div>
+            <div class="path-node n5"><span>05</span><b data-i18n="journeyFuture">Future</b></div>
+          </div>
+          <div class="journey-footer"><div><span class="micro-label" data-i18n="journeyMicro">Small steps. Clearer choices.</span><strong data-i18n="journeyFooter">Keep moving forward.</strong></div><button type="button" class="circle-arrow" data-action="open-saved" aria-label="Open saved items">↗</button></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="discovery-section" id="discovery" aria-labelledby="discoveryTitle">
+      <div class="container">
+        <div class="section-kicker"><span>01</span><span data-i18n="kickerDiscovery">Start here</span></div>
+        <div class="discovery-shell reveal">
+          <div class="discovery-heading"><div><h2 id="discoveryTitle" data-i18n="discoveryTitle">What are you looking for?</h2><p data-i18n="discoverySubtitle">Search across opportunities, pathways and learning options.</p></div><span class="source-badge" data-i18n="verifiedData">Verified-source data</span></div>
+          <form class="global-search" id="globalSearchForm" role="search">
+            <label class="search-box"><span class="search-icon" aria-hidden="true">⌕</span><input id="siteSearch" type="search" autocomplete="off" data-i18n-placeholder="searchPlaceholder" placeholder="Search scholarships, careers, courses, colleges..." aria-controls="searchResults"><kbd>⌘ K</kbd></label>
+            <button class="btn btn-primary" type="submit" data-i18n="searchBtn">Search</button>
+          </form>
+          <div id="searchResults" class="search-results" hidden></div>
+          <div class="quick-chips" aria-label="Quick discovery filters">
+            <button type="button" class="chip active" data-discovery="scholarships" data-i18n="chipScholarships">Scholarships</button>
+            <button type="button" class="chip" data-discovery="careers" data-i18n="chipCareers">Careers</button>
+            <button type="button" class="chip" data-discovery="courses" data-i18n="chipCourses">Courses</button>
+            <button type="button" class="chip" data-discovery="iti" data-i18n="chipITI">ITI</button>
+            <button type="button" class="chip" data-discovery="polytechnic" data-i18n="chipPolytechnic">Polytechnic</button>
+            <button type="button" class="chip" data-discovery="skills" data-i18n="chipSkills">Skills</button>
+            <button type="button" class="chip" data-discovery="schemes" data-i18n="chipSchemes">Government Support</button>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="feature-section" aria-labelledby="featuresTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>02</span><span data-i18n="kickerCore">Core pathways</span></div><h2 id="featuresTitle" data-i18n="featuresTitle">One place to explore your next step.</h2></div><p data-i18n="featuresSubtitle">From funding to future plans, Udaan turns fragmented information into a clearer journey.</p></div>
+        <div class="feature-grid">
+          <article class="feature-card feature-large tone-cream reveal" data-open-section="scholarships"><div class="feature-art"><span class="feature-number">01</span><span class="art-orb orb-c"></span><span class="art-arrow">↗</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagFunding">FUNDING</span><h3 data-i18n="featureScholarship">Scholarships</h3><p data-i18n="featureScholarshipDesc">Search, filter and save opportunities without getting lost in paperwork.</p><button class="text-button" type="button" data-open-section="scholarships"><span data-i18n="openDatabase">Explore database</span> ↗</button></div></article>
+          <article class="feature-card tone-blue reveal" data-open-section="careers"><div class="feature-art"><span class="feature-number">02</span><span class="art-path">↘</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagPathways">PATHWAYS</span><h3 data-i18n="featureCareers">Career Paths</h3><p data-i18n="featureCareersDesc">Explore routes beyond “doctor or engineer” with step-by-step roadmaps.</p><button class="text-button" type="button" data-open-section="careers"><span data-i18n="viewRoadmaps">View roadmaps</span> ↗</button></div></article>
+          <article class="feature-card tone-white reveal" data-open-section="courses"><div class="feature-art"><span class="feature-number">03</span><span class="art-stack">▱</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagLearning">LEARNING</span><h3 data-i18n="featureCourses">Courses & Colleges</h3><p data-i18n="featureCoursesDesc">Compare education routes and discover where your next credential can come from.</p><button class="text-button" type="button" data-open-section="courses"><span data-i18n="browseCourses">Browse learning</span> ↗</button></div></article>
+          <article class="feature-card tone-brown reveal" data-open-section="skills"><div class="feature-art"><span class="feature-number">04</span><span class="art-skill">✦</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagSkills">SKILLS</span><h3 data-i18n="featureSkills">Build Skills</h3><p data-i18n="featureSkillsDesc">Find coding, communication, design and vocational options with practical next steps.</p><button class="text-button" type="button" data-open-section="skills"><span data-i18n="seeSkills">See skill options</span> ↗</button></div></article>
+          <article class="feature-card tone-light-blue reveal" data-open-section="schemes"><div class="feature-art"><span class="feature-number">05</span><span class="art-shield">◌</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagSupport">SUPPORT</span><h3 data-i18n="featureSchemes">Government Support</h3><p data-i18n="featureSchemesDesc">Keep official education and digital-learning resources close at hand.</p><button class="text-button" type="button" data-open-section="schemes"><span data-i18n="viewSupport">View support</span> ↗</button></div></article>
+          <article class="feature-card tone-deep reveal" data-action="open-saved"><div class="feature-art"><span class="feature-number">06</span><span class="art-user">★</span></div><div class="feature-content"><span class="feature-tag" data-i18n="tagPersonal">PERSONAL</span><h3 data-i18n="featureSaved">Saved & Applications</h3><p data-i18n="featureSavedDesc">Keep scholarships, courses and learning resources in one local list and track applications.</p><button class="text-button" type="button" data-action="open-saved"><span data-i18n="openSaved">Open saved</span> ↗</button></div></article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block alt-block" id="scholarships" aria-labelledby="scholarshipTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>03</span><span data-i18n="kickerScholarships">Scholarship finder</span></div><h2 id="scholarshipTitle" data-i18n="scholarshipTitle">Find funding that fits your journey.</h2></div><p data-i18n="scholarshipSubtitle">Official scholarship records linked to their government information or application portal. Check the current scheme notice before applying.</p></div>
+        <div class="filter-layout reveal">
+          <aside class="filter-panel" aria-label="Scholarship filters">
+            <div class="filter-top"><div><span class="filter-label" data-i18n="filters">Filters</span><strong data-i18n="refine">Refine results</strong></div><button class="clear-filter" id="clearScholarshipFilters" type="button" data-i18n="clear">Clear</button></div>
+            <label class="field"><span data-i18n="educationLevel">Education level</span><select id="scholarshipLevel"><option value="" data-i18n="allLevels">All levels</option><option value="school" data-i18n="levelSchool">School</option><option value="college" data-i18n="levelCollege">College</option><option value="vocational" data-i18n="levelVocational">ITI / Vocational</option></select></label>
+            <label class="field" id="schoolStageFilter"><span data-i18n="schoolStage">School stage</span><select id="scholarshipSchoolStage"><option value="" data-i18n="allSchoolStages">All school stages</option><option value="primary" data-i18n="primaryStage">Primary · Classes 1–5</option><option value="secondary" data-i18n="secondaryStage">Secondary · Classes 6–10</option><option value="school" data-i18n="allSchoolStage">School · Classes 1–10</option></select></label>
+            <label class="field"><span data-i18n="category">Category</span><select id="scholarshipCategory"><option value="" data-i18n="allCategories">All categories</option><option value="means" data-i18n="meansBased">Means-based</option><option value="merit" data-i18n="meritBased">Merit-based</option><option value="minority" data-i18n="minority">Minority</option><option value="reserved" data-i18n="reserved">SC / ST / OBC</option></select></label>
+            <label class="field"><span data-i18n="stateRegion">State / region</span><select id="scholarshipState"><option value="" data-i18n="allRegions">All regions</option><option value="maharashtra">Maharashtra</option><option value="all-india">All India</option></select></label>
+            <label class="field"><span data-i18n="incomeRange">Income range</span><select id="scholarshipIncome"><option value="" data-i18n="allIncome">Any</option><option value="low" data-i18n="incomeLow">Lower income</option><option value="middle" data-i18n="incomeMiddle">Middle income</option></select></label>
+            <label class="field"><span data-i18n="scholarshipType">Scholarship type</span><select id="scholarshipType"><option value="" data-i18n="allTypes">All types</option><option value="government" data-i18n="typeGovernment">Government / portal</option><option value="merit" data-i18n="typeMerit">Merit</option><option value="support" data-i18n="typeSupport">Student support</option></select></label>
+            <label class="field"><span data-i18n="statusFilter">Current status</span><select id="scholarshipStatus"><option value="" data-i18n="anyStatus">Any</option><option value="open until" data-i18n="statusOpen">Open / active window</option><option value="check mahadbt" data-i18n="statusMaha">Check MahaDBT 2.0</option></select></label>
+            <div class="filter-note"><strong data-i18n="checkBeforeApply">Before you apply</strong><p data-i18n="checkBeforeApplyText">Eligibility, income limits, documents and deadlines can change. Use the official source linked in the guide.</p></div>
+          </aside>
+          <div class="results-panel">
+            <div class="results-toolbar"><div><span class="results-count" id="scholarshipCount">0 results</span><span class="results-note" data-i18n="sourceNote">Official sources • checked 20 Sep 2026</span></div><div class="toolbar-actions"><span class="source-badge">Official sources</span></div></div>
+            <div class="scholarship-grid" id="scholarshipGrid"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block" id="careers" aria-labelledby="careerTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>04</span><span data-i18n="kickerCareers">Career pathways</span></div><h2 id="careerTitle" data-i18n="careerTitle">There is more than one way forward.</h2></div><p data-i18n="careerSubtitle">Compare pathways, discover required skills and turn an idea into a visual roadmap.</p></div>
+        <div class="career-toolbar reveal"><div class="category-pills" id="careerCategoryPills"><button class="chip active" data-career-category="all">All</button><button class="chip" data-career-category="technology" data-i18n="technology">Technology</button><button class="chip" data-career-category="defense" data-i18n="defense">Defense</button><button class="chip" data-career-category="creative" data-i18n="creativeArts">Creative Arts</button><button class="chip" data-career-category="vocational" data-i18n="vocational">ITI / Vocational</button><button class="chip" data-career-category="healthcare" data-i18n="healthcare">Healthcare</button><button class="chip" data-career-category="business" data-i18n="business">Business</button></div></div>
+        <div class="career-grid" id="careerGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-block alt-block" id="courses" aria-labelledby="courseTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>05</span><span data-i18n="kickerCourses">Learning routes</span></div><h2 id="courseTitle" data-i18n="courseTitle">Courses, colleges and vocational routes.</h2></div><p data-i18n="courseSubtitle">Start with a direction, then explore the right mix of degree, diploma, certification and practice.</p></div>
+        <div class="course-toolbar reveal"><div class="course-search"><label class="search-box light"><span class="search-icon" aria-hidden="true">⌕</span><input id="courseSearch" type="search" data-i18n-placeholder="courseSearchPlaceholder" placeholder="Search course, institute or city"></label><select id="courseType"><option value="" data-i18n="allLearning">All learning routes</option><option value="college" data-i18n="college">College</option><option value="iti" data-i18n="iti">ITI</option><option value="polytechnic" data-i18n="polytechnic">Polytechnic</option><option value="online" data-i18n="online">Online</option></select></div><span class="source-badge" data-i18n="verifiedLocator">Verified institute sources</span></div>
+        <div class="course-grid" id="courseGrid"></div>
+      </div>
+    </section>
+
+    <section class="section-block" id="skills" aria-labelledby="skillsTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>06</span><span data-i18n="kickerSkills">Skill development</span></div><h2 id="skillsTitle" data-i18n="skillsTitle">Build Skills. Build Your Future.</h2></div><p data-i18n="skillsSubtitle">Short, practical learning options for digital, creative, communication and vocational growth.</p></div>
+        <div class="skills-table-wrap reveal"><div class="skills-table-head"><span data-i18n="skillCol">Skill</span><span data-i18n="levelCol">Level</span><span data-i18n="durationCol">Duration</span><span data-i18n="providerCol">Provider</span><span data-i18n="modeCol">Mode</span><span></span></div><div id="skillsTable"></div></div>
+      </div>
+    </section>
+
+    <section class="section-block youtube-section" id="youtube" aria-labelledby="youtubeTitle">
+      <div class="container">
+        <div class="section-head reveal">
+          <div><div class="section-kicker"><span>07</span><span data-i18n="kickerYoutube">YouTube learning</span></div><h2 id="youtubeTitle" data-i18n="youtubeTitle">Free online courses from YouTube.</h2></div>
+          <p data-i18n="youtubeSubtitle">Real public learning videos from established education creators, with current view-count snapshots so students can see what attracts the most learners.</p>
+        </div>
+        <div class="youtube-toolbar reveal">
+          <div class="youtube-filters">
+            <select id="youtubeStage" aria-label="Learning stage">
+              <option value="" data-i18n="allYoutubeStages">All learning</option>
+              <option value="school" data-i18n="ytSchool1to10">School · Classes 1–10</option>
+              <option value="senior" data-i18n="ytSenior11to12">Senior secondary · Classes 11–12</option>
+              <option value="career" data-i18n="ytCollegeSkills">College · Skills & careers</option>
+            </select>
+            <select id="youtubeClass" aria-label="School class">
+              <option value="" data-i18n="allYoutubeClasses">All classes</option>
+              <option value="1">Class 1</option><option value="2">Class 2</option><option value="3">Class 3</option><option value="4">Class 4</option><option value="5">Class 5</option><option value="6">Class 6</option><option value="7">Class 7</option><option value="8">Class 8</option><option value="9">Class 9</option><option value="10">Class 10</option><option value="11">Class 11</option><option value="12">Class 12</option>
+            </select>
+            <select id="youtubeCategory" aria-label="YouTube course category">
+              <option value="" data-i18n="allYoutubeCategories">All categories</option>
+              <option value="programming" data-i18n="ytProgramming">Programming</option>
+              <option value="web" data-i18n="ytWeb">Web development</option>
+              <option value="data" data-i18n="ytData">Data & analytics</option>
+              <option value="marketing" data-i18n="ytMarketing">Marketing</option>
+              <option value="productivity" data-i18n="ytProductivity">Productivity</option>
+              <option value="school" data-i18n="ytSchoolSubjects">School learning</option>
+              <option value="senior-subjects" data-i18n="ytSeniorSubjects">Class 11–12 subjects</option>
+            </select>
+            <select id="youtubeSort" aria-label="Sort YouTube courses">
+              <option value="views" data-i18n="sortMostViewed">Most viewed</option>
+              <option value="latest" data-i18n="sortLatest">Newest first</option>
+              <option value="shortest" data-i18n="sortShortest">Shortest first</option>
+            </select>
+          </div>
+          <div class="youtube-source-note"><span class="live-dot"></span><span data-i18n="ytSnapshot">View counts change over time; direct video counts below are snapshots checked 20 Sep 2026.</span></div>
+        </div>
+        <div class="youtube-feature" id="youtubeTopPick"></div>
+        <div class="youtube-grid" id="youtubeGrid"></div>
+      </div>
+    </section>
+
+    <section class="map-section" id="map-container" aria-labelledby="mapTitle">
+      <div class="container">
+        <div class="map-heading reveal"><div><div class="section-kicker light-kicker"><span>08</span><span data-i18n="kickerLocator">Higher education & vocational locator</span></div><h2 id="mapTitle" data-i18n="mapTitle">Find the next place to learn.</h2><p data-i18n="mapSubtitle">Switch between schools, colleges, ITIs and polytechnics. Institute names and program details are linked to official or recognized sources; map pins may be approximate.</p></div><button class="btn btn-light" type="button" data-action="reset-map" data-i18n="resetMap">Reset view</button></div>
+        <div class="map-shell reveal">
+          <div class="map-controls"><div class="map-search"><label class="search-box dark"><span class="search-icon" aria-hidden="true">⌕</span><input id="mapSearch" type="search" data-i18n-placeholder="mapSearchPlaceholder" placeholder="Search institute, course or city"></label></div><div class="map-filter-selects"><label class="field dark-field"><span data-i18n="locationFilter">Location</span><select id="mapLocation"><option value="" data-i18n="allLocations">All locations</option><option>Badlapur</option><option>Ambernath</option><option>Thane</option><option>Kalyan</option><option>Dombivli</option><option>Ulhasnagar</option></select></label><label class="field dark-field"><span data-i18n="radiusFilter">Radius</span><select id="mapRadius"><option value="" data-i18n="anyRadius">Any radius</option><option value="10">10 km</option><option value="20">20 km</option><option value="50">50 km</option></select></label></div><div class="map-toggles" role="group" aria-label="Map categories"><button class="map-toggle active" data-map-type="schools" data-i18n="schools">Schools</button><button class="map-toggle active" data-map-type="colleges" data-i18n="colleges">Colleges</button><button class="map-toggle active" data-map-type="iti" data-i18n="iti">ITIs</button><button class="map-toggle active" data-map-type="polytechnic" data-i18n="polytechnic">Polytechnics</button></div></div>
+          <div class="map-lower"><div class="map-sidebar"><div class="map-sidebar-head"><span class="micro-label" data-i18n="mapMatches">Map matches</span><strong id="mapResultCount">0</strong></div><div id="mapList" class="map-list"></div><div class="map-disclaimer" data-i18n="mapDisclaimer">Institute data is sourced from official or recognized institute records. Use the linked institute site for current admissions and course availability.</div></div><div id="schoolMap" class="leaflet-map" role="application" aria-label="Interactive education locator map"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section-block alt-block" id="schemes" aria-labelledby="schemesTitle">
+      <div class="container">
+        <div class="section-head reveal"><div><div class="section-kicker"><span>09</span><span data-i18n="kickerSupport">Government support</span></div><h2 id="schemesTitle" data-i18n="schemesTitle">Helpful official resources, without the clutter.</h2></div><p data-i18n="schemesSubtitle">Udaan surfaces official education and digital-learning resources while keeping the main experience student-first.</p></div>
+        <div class="school-support-banner reveal"><div class="school-support-badge">01—10</div><div><strong data-i18n="schoolSupportHeadline">School years covered</strong><p data-i18n="schoolSupportCopy">Primary and secondary support, scholarships, digital learning and admission guidance for school students.</p></div><div class="school-support-links"><a href="https://epathshala.nic.in/" target="_blank" rel="noopener">ePathshala ↗</a><a href="https://diksha.gov.in/" target="_blank" rel="noopener">DIKSHA ↗</a><a href="https://pmposhan-ams.education.gov.in/" target="_blank" rel="noopener">PM POSHAN ↗</a></div></div>
+        <div class="support-grid" id="supportGrid"></div>
+      </div>
+    </section>
+
+    <section class="cta-section" aria-labelledby="ctaTitle"><div class="container cta-grid"><div class="cta-copy reveal"><div class="section-kicker light-kicker"><span>10</span><span data-i18n="kickerPersonal">Your saved journey</span></div><h2 id="ctaTitle" data-i18n="ctaTitle">Keep the opportunities you care about in one place.</h2><p data-i18n="ctaSubtitle">Save scholarships, courses and learning resources, then use the application tracker to remember what you have already opened or applied for.</p><button class="btn btn-light btn-lg" type="button" data-action="open-saved" data-i18n="openSaved">Open saved</button></div><div class="cta-panel reveal"><div class="mini-stat"><span data-i18n="saveLabel">Saved</span><strong id="savedCount">0</strong></div><div class="mini-stat"><span data-i18n="trackedLabel">Tracked</span><strong id="trackedCount">0</strong></div><div class="mini-stat"><span data-i18n="activeScholarships">Scholarships</span><strong id="activeScholarshipCount">0</strong></div><div class="mini-progress"><span data-i18n="journeyProgress">Application progress</span><div><i id="journeyProgressBar"></i></div></div></div></div></section>
+  </main>
+
+  <footer class="site-footer" id="contact"><div class="container footer-grid"><div><a class="brand footer-brand" href="#top"><span class="brand-mark">↗</span><span><strong>UDAAN</strong><small>Career & Scholarship Portal</small></span></a><p data-i18n="footerText">A student-first digital resource built to make career, scholarship, course and skill information easier to discover.</p></div><div><h3 data-i18n="footerExplore">Explore</h3><a href="#scholarships" data-i18n="navScholarships">Scholarships</a><a href="#careers" data-i18n="navCareers">Careers</a><a href="#courses" data-i18n="navCourses">Courses</a><a href="#skills" data-i18n="navSkills">Skills</a><a href="#youtube" data-i18n="navYoutube">YouTube Courses</a><a href="#map-container" data-i18n="navMap">Map</a></div><div><h3 data-i18n="footerProject">Project</h3><a href="about.html" data-i18n="navAbout">About Udaan</a><button type="button" class="footer-button" data-action="open-saved" data-i18n="navSaved">Saved</button><a href="#top" data-i18n="backTop">Back to top</a></div><div><h3 data-i18n="footerNoteTitle">Data note</h3><p data-i18n="footerNote">Scholarship, course, institute and government-resource entries link to official or recognized sources. Saved items and application status are stored locally in your browser.</p></div></div><div class="footer-bottom"><div class="container footer-bottom-inner"><span>© 2026 UDAAN</span><span data-i18n="footerTagline">Your Future. Your Path. Your Udaan.</span></div></div></footer>
+
+  <div class="modal" id="detailModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="detailTitle"><div class="modal-backdrop" data-action="close-detail"></div><div class="modal-dialog detail-dialog"><button class="modal-close" type="button" data-action="close-detail" aria-label="Close">×</button><div id="detailContent"></div></div></div>
+
+    <div class="modal" id="savedModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="savedTitle"><div class="modal-backdrop" data-action="close-saved"></div><div class="modal-dialog saved-dialog"><button class="modal-close" type="button" data-action="close-saved" aria-label="Close">×</button><div class="saved-header"><div class="modal-eyebrow">SAVED</div><h2 id="savedTitle" data-i18n="savedTitle">Saved & Applications</h2><p data-i18n="savedSubtitle">Your saved opportunities and application status stay on this device.</p></div><div id="savedDashboardPanel"></div></div></div>
+
+  <div class="modal" id="eligibilityModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="eligibilityTitle"><div class="modal-backdrop" data-action="close-eligibility"></div><div class="modal-dialog compact-dialog"><button class="modal-close" type="button" data-action="close-eligibility" aria-label="Close">×</button><div id="eligibilityContent"></div></div></div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js" crossorigin=""></script>
+  <script src="script.js" defer></script>
+</body>
+</html>

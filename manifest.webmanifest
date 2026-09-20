@@ -1,0 +1,9 @@
+{
+  "name":"UDAAN — Career & Scholarship Portal",
+  "short_name":"UDAAN",
+  "start_url":"index.html",
+  "display":"standalone",
+  "background_color":"#FFF1E7",
+  "theme_color":"#326080",
+  "description":"Student-first career, scholarship, course and skill discovery prototype."
+}
